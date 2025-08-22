@@ -54,6 +54,10 @@ int main()
     defer {
         printf("This should be executed at the end of the scope, no matter how we exit from here!\n");
     };
+	
+	defer noexcept {
+        printf("We can also have noexcept defer blocks!\n");
+    };
 
     file_display("deferlib.hpp");
     file_display("example.cpp");
